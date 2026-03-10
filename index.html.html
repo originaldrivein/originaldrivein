@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Drive.in - Media Kit Oficial 2025</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+        /* ================= GLOBALS & LAYOUT ================= */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050505;
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .page-container {
+            width: 1280px;
+            max-width: 100%;
+            background-color: #0A0A0A;
+            box-shadow: 0 0 50px rgba(0,0,0,0.9);
+        }
+
+        .slide-section {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background-color: #0A0A0A;
+            border-bottom: 2px solid #1a1a1a;
+            display: flex;
+        }
+
+        /* Classes de Texto Universais */
+        .section-title { font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 3rem; color: #FFFFFF; line-height: 1; margin: 0; letter-spacing: 0.05em; }
+        .accent-text { color: #F7D11E; }
+        .header-bar { display: flex; justify-content: space-between; align-items: flex-end; padding: 40px 60px 20px 60px; z-index: 10; width: 100%; }
+
+        /* ================= SECTION 1 (CAPA) ================= */
+        .slide-section-col { flex-direction: column; }
+        .band-logo { font-family: 'Oswald', sans-serif; letter-spacing: -0.05em; text-shadow: 0px 0px 20px rgba(0,0,0,0.8); }
+        .glitch-bar { background-color: #F7D11E; box-shadow: 0 0 10px rgba(247, 209, 30, 0.5); }
+        .s1-noise { background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E'); }
+
+        /* ================= SECTION 2 (SOBRE) ================= */
+        .left-panel { flex: 1; padding: 40px 50px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10; }
+        .right-panel { width: 45%; position: relative; overflow: hidden; }
+        .right-panel::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 10, 0.2); pointer-events: none; }
+        .image-container-s2 { width: 100%; height: 100%; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); margin-left: -50px; position: relative; z-index: 5; }
+        .timeline-item { position: relative; padding-left: 30px; margin-bottom: 25px; border-left: 2px solid #333; }
+        .timeline-item::before { content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; background-color: #F7D11E; border-radius: 50%; }
+        .deco-line { height: 4px; width: 60px; background-color: #F7D11E; margin-bottom: 20px; }
+
+        /* ================= SECTION 3 (DISCOGRAFIA) ================= */
+        .bg-grid-svg { background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%231a1a1a\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
+        .album-grid-container { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; padding: 10px 60px 40px 60px; width: 100%; }
+        .album-card { display: flex; background-color: #111; border: 1px solid #222; overflow: hidden; transition: transform 0.3s ease; position: relative; }
+        .album-card:hover { border-color: #F7D11E; transform: translateY(-2px); }
+        .album-cover-container { width: 200px; height: 200px; flex-shrink: 0; position: relative; }
+        .album-cover { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.3s ease; }
+        .album-card:hover .album-cover { filter: grayscale(0%); }
+        .album-info { flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+        .album-year { font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #F7D11E; margin-bottom: 5px; display: inline-block; background-color: rgba(247, 209, 30, 0.1); padding: 2px 8px; width: fit-content; }
+        .album-title { font-family: 'Oswald', sans-serif; font-size: 1.8rem; margin-bottom: 10px; line-height: 1.1; text-transform: uppercase; }
+        .track-list { list-style-type: none; padding: 0; margin: 0; }
+        .track-item { font-size: 0.8rem; color: #aaa; margin-bottom: 4px; display: flex; align-items: center; }
+        .track-item i { font-size: 0.6rem; margin-right: 8px; color: #555; }
+        .album-card:hover .track-item i { color: #F7D11E; }
+        .corner-accent { position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 40px 40px 0; border-color: transparent #F7D11E transparent transparent; opacity: 0; transition: opacity 0.3s ease; }
+        .album-card:hover .corner-accent { opacity: 1; }
+        .bg-year-text { position: absolute; right: 10px; bottom: 0; font-family: 'Oswald', sans-serif; font-size: 6rem; font-weight: bold; color: rgba(255, 255, 255, 0.03); line-height: 0.8; pointer-events: none; }
+
+        /* ================= SECTION 4 (FOTOS DESTAQUE) ================= */
+        .bg-dots { background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23FFFFFF" fill-opacity="1" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E'); opacity: 0.03; position: absolute; inset: 0; pointer-events: none; }
+        .gallery-grid { flex: 1; display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 15px; padding: 10px 60px 50px 60px; z-index: 10; width: 100%; }
+        .gallery-item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+        .gallery-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .gallery-item-3 { grid-column: 3 / 4; grid-row: 1 / 2; }
+        .gallery-item-4 { grid-column: 2 / 4; grid-row: 2 / 3; }
+        .photo-card { position: relative; width: 100%; height: 100%; overflow: hidden; border: 1px solid #333; transition: all 0.3s ease; }
+        .photo-card:hover { border-color: #F7D11E; transform: scale(1.01); z-index: 20; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .photo-img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); transition: filter 0.5s ease; }
+        .photo-card:hover .photo-img { filter: grayscale(0%) contrast(1.1); }
+        .photo-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background-color: rgba(10, 10, 10, 0.8); transform: translateY(100%); transition: transform 0.3s ease; }
+        .photo-card:hover .photo-overlay { transform: translateY(0); }
+        .corner-decoration { position: absolute; top: 20px; right: 20px; width: 100px; height: 100px; border-top: 2px solid #F7D11E; border-right: 2px solid #F7D11E; opacity: 0.5; z-index: 5; }
+
+        /* ================= SECTION 5 (VIDEOS) ================= */
+        .bg-boxes { background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.05; position: absolute; inset: 0; pointer-events: none; }
+        .s5-left { width: 50%; padding: 50px 60px; display: flex; flex-direction: column; justify-content: center; z-index: 10; border-right: 1px solid #333; }
+        .s5-right { width: 50%; padding: 0; display: flex; flex-direction: column; background-color: #111; z-index: 10; position: relative; }
+        .highlight-item { margin-bottom: 25px; border-left: 4px solid #F7D11E; padding-left: 20px; }
+        .video-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; height: 100%; }
+        .video-item { position: relative; overflow: hidden; border-bottom: 1px solid #333; }
+        .video-thumb { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) brightness(0.7); transition: all 0.3s ease; }
+        .video-item:hover .video-thumb { filter: grayscale(0%) brightness(1); transform: scale(1.05); }
+        .video-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background-color: rgba(0,0,0,0.8); display: flex; justify-content: space-between; align-items: center; }
+        .play-btn { width: 50px; height: 50px; background-color: rgba(247, 209, 30, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20; transition: transform 0.3s ease; }
+        .video-item:hover .play-btn { transform: translate(-50%, -50%) scale(1.2); }
+        .live-thumb { width: 100px; height: 70px; border: 2px solid #333; overflow: hidden; transition: border-color 0.3s; }
+        .live-thumb img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); }
+        .live-thumb:hover { border-color: #F7D11E; }
+
+        /* ================= SECTION 6 (GALERIA EXTRA) ================= */
+        .s6-gallery-container { flex: 1; display: flex; flex-direction: column; gap: 15px; width: 100%; padding: 10px 60px 20px 60px; z-index: 10; }
+        .s6-gallery-row { display: flex; gap: 15px; width: 100%; }
+        .s6-row-top { height: 55%; }
+        .s6-row-bottom { height: 45%; }
+        .s6-gallery-item { position: relative; overflow: hidden; border: 1px solid #222; transition: border-color 0.3s ease; background-color: #111; }
+        .s6-gallery-item:hover { border-color: #F7D11E; }
+        .s6-gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(110%); transition: filter 0.4s ease, transform 0.4s ease; cursor: pointer; }
+        .s6-gallery-item:hover img { filter: grayscale(0%) contrast(100%); transform: scale(1.03); }
+        .s6-w-1-4 { width: 25%; }
+        .s6-w-1-3 { width: 33.333%; }
+        .s6-img-caption { position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 12px; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; pointer-events: none; }
+        .s6-gallery-item:hover .s6-img-caption { opacity: 1; transform: translateY(0); }
+        .s6-footer-note { margin: 0 60px 30px 60px; display: flex; justify-content: flex-end; align-items: center; border-top: 1px solid #222; padding-top: 10px; z-index: 10; }
+        .s6-accent-bar { position: absolute; left: 0; bottom: 60px; width: 4px; height: 40px; background-color: #F7D11E; z-index: 15; }
+
+        /* ================= SECTION 7 (MERCH) ================= */
+        .product-grid { z-index: 10; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 25px; padding: 10px 60px 40px 60px; height: 100%; width: 100%; }
+        .product-card { background-color: #111; border: 1px solid #222; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; }
+        .product-card:hover { border-color: #F7D11E; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .card-image-wrapper { flex: 1; position: relative; overflow: hidden; background-color: #000; }
+        .card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: transform 0.5s ease, opacity 0.3s; }
+        .product-card:hover .card-image-wrapper img { transform: scale(1.1); opacity: 1; }
+        .card-details { padding: 15px; background-color: #161616; border-top: 1px solid #222; position: relative; }
+        .product-name { font-family: 'Oswald', sans-serif; color: #fff; font-size: 18px; margin: 0 0 5px 0; text-transform: uppercase; font-weight: 500; }
+        .product-type { font-size: 12px; color: #888; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 1px; }
+        .price-tag { font-family: 'Oswald', sans-serif; color: #F7D11E; font-weight: 700; font-size: 16px; position: absolute; right: 15px; top: 15px; }
+        
+        .cta-card { background-color: #F7D11E; border: none; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px; }
+        .cta-card:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(247, 209, 30, 0.3); border-color: transparent; }
+        .cta-icon { font-size: 40px; color: #000; margin-bottom: 20px; }
+        .cta-title { font-family: 'Oswald', sans-serif; font-size: 28px; color: #000; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; line-height: 1; }
+        .cta-text { color: #000; font-size: 14px; line-height: 1.4; max-width: 80%; margin: 0 auto; font-weight: 500; }
+        
+        .badge { position: absolute; top: 10px; left: 10px; padding: 4px 8px; font-family: 'Oswald', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; z-index: 5; }
+        .badge-new { background-color: #fff; color: #000; }
+        .badge-best { background-color: #F7D11E; color: #000; }
+
+        /* MÁGICA DE CRESCIMENTO EXCLUSIVA: */
+        @media (min-width: 768px) {
+            .secao-expandida { height: auto !important; min-height: 100vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container mb-16 mt-0">
+
+        <section class="slide-section slide-section-col">
+            <div class="absolute inset-0 z-0">
+                <img alt="DRIVE.IN Live Show" class="w-full h-full object-cover filter grayscale contrast-125 brightness-75" src= "C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\KONZAO.jpg">
+                <div class="absolute inset-0 bg-black opacity-60"></div>
+                <div class="absolute inset-0 opacity-10 s1-noise"></div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full w-full px-16">
+                <div class="absolute top-0 left-0 w-full p-8 flex justify-between items-start opacity-70">
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 bg-[#F7D11E]"></div><p class="text-white font-montserrat text-xs tracking-[0.2em] uppercase">São Paulo / Brasil</p></div>
+                    <div class="flex items-center gap-2"><p class="text-white font-montserrat text-xs tracking-[0.2em] uppercase">Est. 2005</p><div class="w-2 h-2 bg-[#F7D11E]"></div></div>
+                </div>
+                <div class="flex flex-col items-center text-center mt-8">
+                    <p class="text-[#F7D11E] font-montserrat font-bold text-lg tracking-[0.6em] mb-4 uppercase animate-pulse">Apresentação Oficial</p>
+                    <img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\logobranco_PN.png" alt="Logo Oficial Drive.in" class="h-24 md:h-48 mb-2 object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]" />
+                    <div class="w-24 h-1.5 glitch-bar mb-8"></div>
+                    <div class="flex flex-col items-center gap-2">
+                        <p class="text-white font-oswald text-4xl uppercase tracking-wide">Media Kit <span class="text-gray-400">2025</span></p>
+                        <p class="text-gray-300 font-montserrat text-lg font-light tracking-widest max-w-2xl mt-2 border-t border-gray-600 pt-4">POST-HARDCORE / METAL / ALTERNATIVO</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-12 w-full flex justify-center"><p class="text-gray-500 font-montserrat text-xs tracking-widest uppercase">Documento Confidencial © 2025 Drive.in Original</p></div>
+            </div>
+            <div class="absolute bottom-6 w-full flex justify-center z-20 animate-bounce text-gray-500 text-sm">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section class="slide-section">
+            <div class="absolute inset-0 opacity-5 s1-noise pointer-events-none"></div>
+            <div class="left-panel">
+                <div class="deco-line"></div>
+                <p class="text-gray-400 font-bold tracking-widest uppercase text-sm mb-2">História & Trajetória</p>
+                <h1 class="section-title text-5xl mb-6">Sobre a <span class="accent-text">Banda</span></h1>
+                <div class="mb-6 pr-8">
+                    <p class="text-gray-300 text-sm leading-relaxed text-justify">DRIVE.IN é uma banda paulistana formada em 2005, influenciada pelo estilo Post-Hardcore/Metal. Desde o início, o grupo utilizou a internet como principal meio de divulgação, conquistando fãs fiéis na cena underground de São Paulo e marcando presença em festivais independentes e casas lendárias como o Hangar 110.</p>
+                </div>
+                <div class="mt-2 flex-grow overflow-hidden">
+                    <div class="timeline-item"><p class="font-bold text-lg text-white font-oswald">2006 <span class="text-gray-500 text-sm font-montserrat font-normal ml-2">/// O Início</span></p><p class="text-gray-400 text-xs mt-1">Lançamento do primeiro EP com os hits "20 Poemas e uma Canção Desesperada" e "No Encontro Privado de Minha Fé".</p></div>
+                    <div class="timeline-item"><p class="font-bold text-lg text-white font-oswald">2007 <span class="text-gray-500 text-sm font-montserrat font-normal ml-2">/// Álbum "Respostas"</span></p><p class="text-gray-400 text-xs mt-1">Lançado pela Onelife Recordings. Sucesso de streaming na MTV antes mesmo do show oficial.</p></div>
+                    <div class="timeline-item"><p class="font-bold text-lg text-white font-oswald">2010 - 2020 <span class="text-gray-500 text-sm font-montserrat font-normal ml-2">/// Período de Transição & IMUS</span></p><p class="text-gray-400 text-xs mt-1">Produção do álbum "IMUS" iniciada em 2010, engavetada e lançada oficialmente em 2020.</p></div>
+                    <div class="timeline-item" style="border-left-color: #F7D11E;"><p class="font-bold text-lg text-[#F7D11E] font-oswald">2022 - Atual <span class="text-gray-500 text-sm font-montserrat font-normal ml-2 text-white">/// Nova Era</span></p><p class="text-gray-300 text-xs mt-1">Retorno de Thiago (fundador) e Gustavo (vocal), unindo-se a Bruna nos vocais. Álbum "Mariposa" previsto para 2025.</p></div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="image-container-s2 bg-gray-800">
+                    <img alt="Vocalista DRIVE.IN Live" class="w-full h-full object-cover filter contrast-125 brightness-90 grayscale hover:grayscale-0 transition-all duration-500" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\@konfotografia-137.jpg"/>
+                </div>
+                <div class="absolute bottom-8 right-8 text-right z-10">
+                    <p class="text-white font-oswald text-4xl font-bold leading-none opacity-20">AO VIVO</p>
+                    <p class="text-[#F7D11E] font-montserrat text-xs tracking-widest uppercase font-bold">Performance Intensa</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide-section slide-section-col bg-grid-svg">
+            <header class="header-bar border-b border-gray-800">
+                <div><p class="text-gray-500 font-bold tracking-widest uppercase text-xs mb-1">Catálogo Oficial</p><h1 class="section-title text-5xl">Disco<span class="accent-text">grafia</span></h1></div>
+                <div class="flex items-center gap-2"><div class="h-px w-16 bg-gray-600"></div><p class="text-gray-400 text-xs tracking-widest uppercase">2006 — 2025</p></div>
+            </header>
+            <div class="album-grid-container">
+                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2006</div><div class="album-cover-container"><img alt="Capa EP" class="album-cover" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\EP_2005.png"/></div><div class="album-info"><p class="album-year">2006 /// EP DE ESTREIA</p><h2 class="album-title text-white">Drive.in <span class="text-gray-500 text-lg">EP</span></h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> 20 Poemas e uma Canção Desesperada</p><p class="track-item"><i class="fas fa-play"></i> No Encontro Privado de Minha Fé</p></div></div></div>
+                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2007</div><div class="album-cover-container"><img alt="Capa Respostas" class="album-cover" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\RESPOSTA_2010.png"/></div><div class="album-info"><p class="album-year">2007 /// ÁLBUM COMPLETO</p><h2 class="album-title text-white">Respostas</h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> O Outro Lado</p><p class="track-item"><i class="fas fa-play"></i> Acredite Se Quiser</p><p class="track-item"><i class="fas fa-play"></i> Estigma</p></div></div></div>
+                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2020</div><div class="album-cover-container"><img alt="Capa IMUS" class="album-cover" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\IMUS_2020.png"/></div><div class="album-info"><p class="album-year">2020 /// ÁLBUM PERDIDO</p><h2 class="album-title text-white">IMUS</h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> Gravado originalmente em 2010</p><p class="track-item"><i class="fas fa-play"></i> O Fardo (Single)</p></div></div></div>
+                <div class="album-card" style="border-color: #333;"><div class="corner-accent" style="opacity: 1;"></div><div class="bg-year-text">2025</div><div class="album-cover-container"><img alt="Capa Mariposa" class="album-cover" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\MARIPOSA_2025.png" style="filter: grayscale(0%);"/><div class="absolute bottom-0 left-0 bg-[#F7D11E] text-yellow text-xs font-bold px-2 py-1 font-oswald uppercase">Novo Álbum</div></div><div class="album-info"><p class="album-year" style="background-color: #F7D11E; color: #000;">2025 /// LANÇAMENTO MAIO</p><h2 class="album-title text-white">Mariposa</h2><div class="track-list"><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Distante da Cura</p><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Mente e Coração</p></div></div></div>
+            </div>
+        </section>
+
+        <section class="slide-section slide-section-col secao-expandida">
+            <div class="bg-dots"></div>
+            <div class="corner-decoration"></div>
+            <header class="header-bar">
+                <div class="flex items-end"><div class="w-px h-16 bg-[#F7D11E] mr-6"></div><div><p class="text-gray-400 tracking-widest uppercase text-xs mb-1">Press Kit // 2025</p><h1 class="section-title">Fotos <span class="accent-text">Promocionais</span></h1></div></div>
+                <div class="text-right"><p class="text-gray-500 font-oswald text-xl">DRIVE.IN</p><div class="w-24 h-1 bg-gray-800 mt-1 ml-auto"></div></div>
+            </header>
+            <div class="gallery-grid">
+                <div class="photo-card gallery-item-1"><img alt="Formação Completa" class="photo-img" src= "C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\promo_spotify.jpg"/><div class="photo-overlay"><p class="font-oswald text-[#F7D11E] text-lg uppercase m-0">Formação 2025</p></div><div class="absolute top-4 left-4 bg-[#F7D11E] text-black px-2 py-1 font-bold text-xs font-oswald uppercase">Destaque</div></div>
+                <div class="photo-card gallery-item-2"><img alt="Banda Estúdio" class="photo-img" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\promo_spotify02.jpg"/><div class="photo-overlay"><p class="font-oswald text-[#F7D11E] text-base uppercase m-0">Sessão Estúdio</p></div></div>
+                <div class="photo-card gallery-item-3"><img alt="Banda Urbana" class="photo-img" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\IMG_1426.jpg"/><div class="photo-overlay"><p class="font-oswald text-[#F7D11E] text-base uppercase m-0">Editorial Urbano</p></div></div>
+                <div class="photo-card gallery-item-4"><img alt="Banda Fundo Branco" class="photo-img" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\_DSC4646.jpg" style="object-position: top;"/><div class="photo-overlay"><p class="font-oswald text-[#F7D11E] text-base uppercase m-0">Sessão Promocional Brutal Kill</p></div></div>
+            </div>
+        </section>
+
+        <section class="slide-section">
+            <div class="bg-boxes"></div>
+            <div class="s5-left">
+                <div><p class="text-gray-500 font-bold tracking-widest uppercase text-xs mb-2">Marcos & Conquistas</p><h1 class="section-title">Destaques <br/><span class="accent-text">& Videoclipes</span></h1></div>
+                <div class="mt-8">
+                    <div class="highlight-item"><h3 class="font-oswald text-lg text-white uppercase mb-1 flex items-center gap-2"><i class="fas fa-broadcast-tower text-[#F7D11E]"></i> MTV Streaming (2007)</h3><p class="text-gray-400 text-sm">O álbum "Respostas" foi disponibilizado integralmente no site da MTV antes do lançamento.</p></div>
+                    <div class="highlight-item"><h3 class="font-oswald text-lg text-white uppercase mb-1 flex items-center gap-2"><i class="fas fa-users text-[#F7D11E]"></i> Nova Formação & Retorno</h3><p class="text-gray-400 text-sm">Retorno pós-pandemia com formação expandida: vocal duplo (Gustavo e Bruna).</p></div>
+                    <div class="highlight-item"><h3 class="font-oswald text-lg text-white uppercase mb-1 flex items-center gap-2"><i class="fas fa-video text-[#F7D11E]"></i> Produção Audiovisual</h3><p class="text-gray-400 text-sm">Videoclipes com estética cinematográfica disponíveis no YouTube oficial da banda.</p></div>
+                </div>
+                <div class="mt-8"><p class="text-gray-600 font-oswald text-sm uppercase mb-3">Performance ao vivo</p><div class="flex gap-4"><div class="live-thumb"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\acredite_aovivo.png"/></div><div class="live-thumb"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\distante_aovivo.png"/></div><div class="live-thumb"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\kiss_aovivo.png"/></div></div></div>
+            </div>
+            <div class="s5-right">
+                <div class="absolute top-0 right-0 bg-[#F7D11E] text-black font-bold px-4 py-2 z-30 font-oswald uppercase text-sm">Assista Agora</div>
+                <div class="video-grid">
+                    <div class="video-item"><img class="video-thumb" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\distante_.png" style="object-position: top;"/><div class="play-btn"><i class="fas fa-play"></i></div><div class="video-overlay"><div><p class="text-white font-oswald uppercase text-xl m-0">Distante da Cura</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Single Oficial</p></div><div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div></div></div>
+                    <div class="video-item"><img class="video-thumb" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\mariposa_clip.png" style="object-position: center;"/><div class="play-btn"><i class="fas fa-play"></i></div><div class="video-overlay"><div><p class="text-white font-oswald uppercase text-xl m-0">Mariposa</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Lançamento Recente</p></div><div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide-section slide-section-col bg-grid-svg secao-expandida">
+            <div class="s6-accent-bar"></div>
+            <header class="header-bar border-b border-gray-800">
+                <div><h1 class="section-title text-5xl">Galeria <span class="accent-text">Visual</span></h1></div>
+                <div class="flex items-center gap-2">
+                    <p class="font-oswald text-gray-400 text-sm tracking-widest uppercase m-0">Live • Studio • Backstage</p>
+                </div>
+            </header>
+            
+            <div class="s6-gallery-container">
+                <div class="s6-gallery-row s6-row-top">
+                    <div class="s6-gallery-item s6-w-1-4">
+                        <img alt="Vocal Live" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\@konfotografia-147.jpg"/>
+                        <div class="s6-img-caption"><p>Live Performance 2024</p></div>
+                    </div>
+                    <div class="s6-gallery-item s6-w-1-4">
+                        <img alt="Stage Action" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\@konfotografia-170.jpg"/>
+                        <div class="s6-img-caption"><p>Stage Energy</p></div>
+                    </div>
+                    <div class="s6-gallery-item s6-w-1-4">
+                        <img alt="Band Portrait" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\01.png"/>
+                        <div class="s6-img-caption"><p>Promo Shoot 2023</p></div>
+                    </div>
+                    <div class="s6-gallery-item s6-w-1-4">
+                        <img alt="Band Sofa" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\paulista.jpg"/>
+                        <div class="s6-img-caption"><p>Studio Session</p></div>
+                    </div>
+                </div>
+                
+                <div class="s6-gallery-row s6-row-bottom">
+                    <div class="s6-gallery-item s6-w-1-3">
+                        <img alt="Live Wide" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\_DSC4608.jpg"/>
+                        <div class="s6-img-caption"><p>Carioca Club 2024</p></div>
+                    </div>
+                    <div class="s6-gallery-item s6-w-1-3">
+                        <img alt="Studio Group" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\_DSC4794_tratada.jpg"/>
+                        <div class="s6-img-caption"><p>Nova Formação</p></div>
+                    </div>
+                    <div class="s6-gallery-item s6-w-1-3">
+                        <img alt="Crowd Selfie" src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\promo_spotify.jpg"/>
+                        <div class="s6-img-caption"><p>Com os Fãs</p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="s6-footer-note">
+                <p class="text-gray-400 text-xs font-montserrat m-0">
+                    <i class="fas fa-info-circle text-[#F7D11E] mr-1"></i> Press kit completo com arquivos em alta resolução disponível mediante solicitação: <strong class="text-white">contatobandadrivein@gmail.com</strong>
+                </p>
+            </div>
+        </section>
+
+        <section class="slide-section slide-section-col bg-grid-svg secao-expandida">
+            <header class="header-bar border-b border-gray-800">
+                <div><h1 class="section-title text-5xl">Merch <span class="accent-text">Oficial</span></h1></div>
+                <div class="bg-[#222] px-4 py-2 rounded flex items-center gap-2"><i class="fas fa-shipping-fast text-[#F7D11E]"></i><p class="font-oswald text-[#F7D11E] text-sm uppercase tracking-wide m-0">Enviamos para todo o Brasil</p></div>
+            </header>
+            <div class="product-grid">
+                <div class="product-card"><div class="card-image-wrapper"><div class="badge badge-best">+ Vendida</div><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\origina_ts.jpg"/></div><div class="card-details"><p class="product-name">T-Shirt "Original Screamo"</p><p class="product-type">Vestuário • Unissex</p><span class="price-tag">R$ 80,00</span></div></div>
+                <div class="product-card"><div class="card-image-wrapper"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\mariposa_costas.jpg"/></div><div class="card-details"><p class="product-name">T-Shirt "Mariposa" (Costas)</p><p class="product-type">Vestuário • Detalhe</p><span class="price-tag">R$ 80,00</span></div></div>
+                <div class="product-card"><div class="card-image-wrapper"><div class="badge badge-new">Coleção Inverno</div><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\moletom.png"/></div><div class="card-details"><p class="product-name">Moletom "Mariposa" Disco</p><p class="product-type">Vestuário • Heavy Cotton</p><span class="price-tag">R$ 180,00</span></div></div>
+                <div class="product-card"><div class="card-image-wrapper"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\show_carioca.png"/></div><div class="card-details"><p class="product-name">Poster "Mariposa" A3</p><p class="product-type">Decoração • Papel Couché</p><span class="price-tag">R$ 30,00</span></div></div>
+                <div class="product-card"><div class="card-image-wrapper"><img src="C:\Users\gusta\Documents\Drive-in\MediaKit_online\smc\mockup_.jpg"/></div><div class="card-details"><p class="product-name">Camiseta Mariposa Disco</p><p class="product-type">Vestuário • Feminina</p><span class="price-tag">R$ 25,00</span></div></div>
+                <div class="product-card cta-card"><i class="fab fa-instagram cta-icon"></i><p class="cta-title">Faça seu Pedido</p><div class="cta-text"><p>Pedidos diretamente via DM no Instagram ou em nossa banca de merch nos shows.</p></div><div class="mt-4 bg-black text-[#F7D11E] px-6 py-2 font-bold font-oswald uppercase text-lg">@originaldrivein</div></div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
