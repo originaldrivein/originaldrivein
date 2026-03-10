@@ -40,14 +40,14 @@
         /* ================= SECTION 3 (DISCOGRAFIA) ================= */
         .bg-grid-svg { background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%231a1a1a\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
         .album-grid-container { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; padding: 10px 60px 40px 60px; width: 100%; }
-        .album-card { display: flex; background-color: #111; border: 1px solid #222; overflow: hidden; transition: transform 0.3s ease; position: relative; }
+        .album-card { display: flex; background-color: #111; border: 1px solid #222; overflow: hidden; transition: transform 0.3s ease; position: relative; cursor: pointer; text-decoration: none; }
         .album-card:hover { border-color: #F7D11E; transform: translateY(-2px); }
         .album-cover-container { width: 200px; height: 200px; flex-shrink: 0; position: relative; }
         .album-cover { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.3s ease; }
         .album-card:hover .album-cover { filter: grayscale(0%); }
         .album-info { flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
         .album-year { font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #F7D11E; margin-bottom: 5px; display: inline-block; background-color: rgba(247, 209, 30, 0.1); padding: 2px 8px; width: fit-content; }
-        .album-title { font-family: 'Oswald', sans-serif; font-size: 1.8rem; margin-bottom: 10px; line-height: 1.1; text-transform: uppercase; }
+        .album-title { font-family: 'Oswald', sans-serif; font-size: 1.8rem; margin-bottom: 10px; line-height: 1.1; text-transform: uppercase; color: #FFF; }
         .track-list { list-style-type: none; padding: 0; margin: 0; }
         .track-item { font-size: 0.8rem; color: #aaa; margin-bottom: 4px; display: flex; align-items: center; }
         .track-item i { font-size: 0.6rem; margin-right: 8px; color: #555; }
@@ -77,7 +77,7 @@
         .s5-right { width: 50%; padding: 0; display: flex; flex-direction: column; background-color: #111; z-index: 10; position: relative; }
         .highlight-item { margin-bottom: 25px; border-left: 4px solid #F7D11E; padding-left: 20px; }
         .video-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; height: 100%; }
-        .video-item { position: relative; overflow: hidden; border-bottom: 1px solid #333; }
+        .video-item { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #333; cursor: pointer; text-decoration: none; }
         .video-thumb { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) brightness(0.7); transition: all 0.3s ease; }
         .video-item:hover .video-thumb { filter: grayscale(0%) brightness(1); transform: scale(1.05); }
         .video-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background-color: rgba(0,0,0,0.8); display: flex; justify-content: space-between; align-items: center; }
@@ -115,7 +115,7 @@
         .product-type { font-size: 12px; color: #888; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 1px; }
         .price-tag { font-family: 'Oswald', sans-serif; color: #F7D11E; font-weight: 700; font-size: 16px; position: absolute; right: 15px; top: 15px; }
         
-        .cta-card { background-color: #F7D11E; border: none; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px; }
+        .cta-card { background-color: #F7D11E; border: none; display: block; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px; text-decoration: none; cursor: pointer; }
         .cta-card:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(247, 209, 30, 0.3); border-color: transparent; }
         .cta-icon { font-size: 40px; color: #000; margin-bottom: 20px; }
         .cta-title { font-family: 'Oswald', sans-serif; font-size: 28px; color: #000; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; line-height: 1; }
@@ -195,10 +195,46 @@
                 <div class="flex items-center gap-2"><div class="h-px w-16 bg-gray-600"></div><p class="text-gray-400 text-xs tracking-widest uppercase">2006 — 2025</p></div>
             </header>
             <div class="album-grid-container">
-                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2006</div><div class="album-cover-container"><img alt="Capa EP" class="album-cover" src="smc/EP_2005.png"/></div><div class="album-info"><p class="album-year">2006 /// EP DE ESTREIA</p><h2 class="album-title text-white">Drive.in <span class="text-gray-500 text-lg">EP</span></h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> 20 Poemas e uma Canção Desesperada</p><p class="track-item"><i class="fas fa-play"></i> No Encontro Privado de Minha Fé</p></div></div></div>
-                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2007</div><div class="album-cover-container"><img alt="Capa Respostas" class="album-cover" src="smc/RESPOSTA_2010.png"/></div><div class="album-info"><p class="album-year">2007 /// ÁLBUM COMPLETO</p><h2 class="album-title text-white">Respostas</h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> O Outro Lado</p><p class="track-item"><i class="fas fa-play"></i> Acredite Se Quiser</p><p class="track-item"><i class="fas fa-play"></i> Estigma</p></div></div></div>
-                <div class="album-card"><div class="corner-accent"></div><div class="bg-year-text">2020</div><div class="album-cover-container"><img alt="Capa IMUS" class="album-cover" src="smc/IMUS_2020.png"/></div><div class="album-info"><p class="album-year">2020 /// ÁLBUM PERDIDO</p><h2 class="album-title text-white">IMUS</h2><div class="track-list"><p class="track-item"><i class="fas fa-play"></i> Gravado originalmente em 2010</p><p class="track-item"><i class="fas fa-play"></i> O Fardo (Single)</p></div></div></div>
-                <div class="album-card" style="border-color: #333;"><div class="corner-accent" style="opacity: 1;"></div><div class="bg-year-text">2025</div><div class="album-cover-container"><img alt="Capa Mariposa" class="album-cover" src="smc/MARIPOSA_2025.png" style="filter: grayscale(0%);"/><div class="absolute bottom-0 left-0 bg-[#F7D11E] text-yellow text-xs font-bold px-2 py-1 font-oswald uppercase">Novo Álbum</div></div><div class="album-info"><p class="album-year" style="background-color: #F7D11E; color: #000;">2025 /// LANÇAMENTO MAIO</p><h2 class="album-title text-white">Mariposa</h2><div class="track-list"><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Distante da Cura</p><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Mente e Coração</p></div></div></div>
+                
+                <a href="https://open.spotify.com/intl-pt/album/04FmwJOyJZxxxO8xtQYGms" target="_blank" class="album-card">
+                    <div class="corner-accent"></div><div class="bg-year-text">2006</div>
+                    <div class="album-cover-container"><img alt="Capa EP" class="album-cover" src="smc/EP_2005.png"/></div>
+                    <div class="album-info">
+                        <p class="album-year">2006 /// EP DE ESTREIA</p><h2 class="album-title text-white">Drive.in <span class="text-gray-500 text-lg">EP</span></h2>
+                        <div class="track-list"><p class="track-item"><i class="fas fa-play"></i> 20 Poemas e uma Canção Desesperada</p><p class="track-item"><i class="fas fa-play"></i> No Encontro Privado de Minha Fé</p></div>
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/intl-pt/album/066n9khWrGC5n7q4MeaiiM" target="_blank" class="album-card">
+                    <div class="corner-accent"></div><div class="bg-year-text">2007</div>
+                    <div class="album-cover-container"><img alt="Capa Respostas" class="album-cover" src="smc/RESPOSTA_2010.png"/></div>
+                    <div class="album-info">
+                        <p class="album-year">2007 /// ÁLBUM COMPLETO</p><h2 class="album-title text-white">Respostas</h2>
+                        <div class="track-list"><p class="track-item"><i class="fas fa-play"></i> O Outro Lado</p><p class="track-item"><i class="fas fa-play"></i> Acredite Se Quiser</p><p class="track-item"><i class="fas fa-play"></i> Estigma</p></div>
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/intl-pt/album/6NaFpvtPRAXSy0ZRXFlhJg" target="_blank" class="album-card">
+                    <div class="corner-accent"></div><div class="bg-year-text">2020</div>
+                    <div class="album-cover-container"><img alt="Capa IMUS" class="album-cover" src="smc/IMUS_2020.png"/></div>
+                    <div class="album-info">
+                        <p class="album-year">2020 /// ÁLBUM PERDIDO</p><h2 class="album-title text-white">IMUS</h2>
+                        <div class="track-list"><p class="track-item"><i class="fas fa-play"></i> Gravado originalmente em 2010</p><p class="track-item"><i class="fas fa-play"></i> O Fardo (Single)</p></div>
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/intl-pt/album/4vOwhXl15DtvLfzoHWnsKg" target="_blank" class="album-card" style="border-color: #333;">
+                    <div class="corner-accent" style="opacity: 1;"></div><div class="bg-year-text">2025</div>
+                    <div class="album-cover-container">
+                        <img alt="Capa Mariposa" class="album-cover" src="smc/MARIPOSA_2025.png" style="filter: grayscale(0%);"/>
+                        <div class="absolute bottom-0 left-0 bg-[#F7D11E] text-yellow text-xs font-bold px-2 py-1 font-oswald uppercase">Novo Álbum</div>
+                    </div>
+                    <div class="album-info">
+                        <p class="album-year" style="background-color: #F7D11E; color: #000;">2025 /// LANÇAMENTO MAIO</p><h2 class="album-title text-white">Mariposa</h2>
+                        <div class="track-list"><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Distante da Cura</p><p class="track-item"><i class="fas fa-star text-[#F7D11E]"></i> Mente e Coração</p></div>
+                    </div>
+                </a>
+
             </div>
         </section>
 
@@ -231,8 +267,25 @@
             <div class="s5-right">
                 <div class="absolute top-0 right-0 bg-[#F7D11E] text-black font-bold px-4 py-2 z-30 font-oswald uppercase text-sm">Assista Agora</div>
                 <div class="video-grid">
-                    <div class="video-item"><img class="video-thumb" src="smc/distante_.png" style="object-position: top;"/><div class="play-btn"><i class="fas fa-play"></i></div><div class="video-overlay"><div><p class="text-white font-oswald uppercase text-xl m-0">Distante da Cura</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Single Oficial</p></div><div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div></div></div>
-                    <div class="video-item"><img class="video-thumb" src="smc/mariposa_clip.png" style="object-position: center;"/><div class="play-btn"><i class="fas fa-play"></i></div><div class="video-overlay"><div><p class="text-white font-oswald uppercase text-xl m-0">Mariposa</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Lançamento Recente</p></div><div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div></div></div>
+                    
+                    <a href="https://www.youtube.com/watch?v=onCyXe3Gpe8" target="_blank" class="video-item block">
+                        <img class="video-thumb" src="smc/distante_.png" style="object-position: top;"/>
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <div class="video-overlay">
+                            <div><p class="text-white font-oswald uppercase text-xl m-0">Distante da Cura</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Single Oficial</p></div>
+                            <div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=RFNLZING3TQ" target="_blank" class="video-item block">
+                        <img class="video-thumb" src="smc/mariposa_clip.png" style="object-position: center;"/>
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <div class="video-overlay">
+                            <div><p class="text-white font-oswald uppercase text-xl m-0">Mariposa</p><p class="text-[#F7D11E] text-xs font-bold uppercase m-0">Lançamento Recente</p></div>
+                            <div class="text-gray-400 text-xs border border-gray-600 px-2 py-1 rounded">4K HD</div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -284,7 +337,8 @@
             
             <div class="s6-footer-note">
                 <p class="text-gray-400 text-xs font-montserrat m-0">
-                    <i class="fas fa-info-circle text-[#F7D11E] mr-1"></i> Press kit completo com arquivos em alta resolução disponível mediante solicitação: <strong class="text-white">contatobandadrivein@gmail.com</strong>
+                    <i class="fas fa-info-circle text-[#F7D11E] mr-1"></i> Press kit completo com arquivos em alta resolução disponível mediante solicitação: 
+                    <a href="mailto:contatobandadrivein@gmail.com" class="text-white hover:text-[#F7D11E] transition-colors">contatobandadrivein@gmail.com</a>
                 </p>
             </div>
         </section>
@@ -300,7 +354,14 @@
                 <div class="product-card"><div class="card-image-wrapper"><div class="badge badge-new">Coleção Inverno</div><img src="smc/moletom.png"/></div><div class="card-details"><p class="product-name">Moletom "Mariposa" Disco</p><p class="product-type">Vestuário • Heavy Cotton</p><span class="price-tag">R$ 180,00</span></div></div>
                 <div class="product-card"><div class="card-image-wrapper"><img src="smc/show_carioca.png"/></div><div class="card-details"><p class="product-name">Poster "Mariposa" A3</p><p class="product-type">Decoração • Papel Couché</p><span class="price-tag">R$ 30,00</span></div></div>
                 <div class="product-card"><div class="card-image-wrapper"><img src="smc/mockup_.jpg"/></div><div class="card-details"><p class="product-name">Camiseta Mariposa Disco</p><p class="product-type">Vestuário • Unissex</p><span class="price-tag">R$ 25,00</span></div></div>
-                <div class="product-card cta-card"><i class="fab fa-instagram cta-icon"></i><p class="cta-title">Faça seu Pedido</p><div class="cta-text"><p>Pedidos diretamente via DM no Instagram ou em nossa banca de merch nos shows.</p></div><div class="mt-4 bg-black text-[#F7D11E] px-6 py-2 font-bold font-oswald uppercase text-lg">@originaldrivein</div></div>
+                
+                <a href="https://www.instagram.com/originaldrivein/" target="_blank" class="product-card cta-card group">
+                    <i class="fab fa-instagram cta-icon group-hover:scale-110 transition-transform"></i>
+                    <p class="cta-title">Faça seu Pedido</p>
+                    <div class="cta-text"><p>Pedidos diretamente via DM no Instagram ou em nossa banca de merch nos shows.</p></div>
+                    <div class="mt-4 bg-black text-[#F7D11E] px-6 py-2 font-bold font-oswald uppercase text-lg group-hover:bg-white group-hover:text-black transition-colors duration-300">@originaldrivein</div>
+                </a>
+
             </div>
         </section>
 
